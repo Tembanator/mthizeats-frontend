@@ -1,6 +1,5 @@
 import landingImage from "../assets/landing.png";
 import appDownload from "../assets/appDownload.png";
-import Footer from "@/components/Footer";
 export default function Homepage() {
   return (
     <div className="flex flex-col gap-12">
