@@ -4,25 +4,25 @@ import { Navigate, Outlet } from "react-router-dom";
 export default function ProtectedRoute() {
   const { isAuthenticated, isLoading } = useAuth0();
 
-  if (isLoading) {
-    return null;
-  }
+  // if (isLoading) {
+  //   return null;
+  // }
 
-  if (isAuthenticated) {
-    return <Outlet />;
-  }
+  // if (isAuthenticated) {
+  //   return <Outlet />;
+  // }
 
-  <Navigate
-    to="/"
-    replace
-  />;
+  // <Navigate
+  //   to="/"
+  //   replace
+  // />;
 
-  // return isAuthenticated ? (
-  //   <Outlet />
-  // ) : (
-  //   <Navigate
-  //     to="/"
-  //     replace
-  //   />
-  // );
+  return isAuthenticated ? (
+    <Outlet />
+  ) : (
+    <Navigate
+      to="/"
+      replace
+    />
+  );
 }
